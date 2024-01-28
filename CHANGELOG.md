@@ -7,7 +7,7 @@ This project is NOT an API, and thus does not declare a public API. Therefore, i
 
 ## \[Unreleased\]
 
-## \[0.0.0\] - 2024-01-27
+## \[0.0.0\] - 2024-01-28
 
 Any versions before this one were developed before migrating the project to GitHub.
 
