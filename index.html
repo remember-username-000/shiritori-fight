@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>test</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Dictionary File -->
+            <script src="JMdict/data-jmdict-common.js" onload="console.log('Dictionary loaded successfully');"></script>
+        
+        <!-- JS program files -->
+            <script src="main.js"></script>
+            <script src="lib/jmDictSearch.js"></script>
+            <script src="lib/checkWordIsValid.js"></script>
+            <script src="lib/findNextWord.js"></script>
+            <script src="lib/handleInput.js"></script>
+            <script src="lib/manageGame.js"></script>
+            
+            <script src="lib/updatePage.js"></script>
+
+    </head>
+    <body onload="onLoad();">
+        <main>
+            <div id="container">
+                <div id="main-game">
+                    <p>qweiuy</p>
+                    <p>sldkfj</p>
+                    <br><br>
+                        <div id="user-word-interface">
+                            <label for="word-input">Input word:</label> <br>
+                            <input type="text" id="word-input" name="word-input" disabled>
+                            <div id="user-get">
+                                <input type="button" id="get" name="get" value="Get" disabled>
+                                <div id="word-select-menu">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="panel" id="right-panel">
+                    <div class="panel-menu-bar">
+                        <p class="panel-menu-tab-text class-word-history">Words</p>
+                    </div>
+                    <div class="panel-contents class-word-history" id="word-history"></div>
+                </div>
+                <div class="panel" id="bottom-panel">
+                    <div class="panel-menu-bar">
+                        <p class="panel-menu-tab-text class-game-log">Game Log</p>
+                        <p class="panel-menu-tab-text class-game-options">Options</p>
+                    </div>
+                    <div class="panel-contents class-game-log" id="game-log">
+                        <p style="margin-top: 0;">Welcome! Waiting for game start... (Start the game from the Options menu.)</p>
+                    </div>
+                    <div class="panel-contents class-game-options" id="game-options">
+                        <input type="button" id="start-game" name="start-game" value="Start Game">
+                        <input type="button" id="end-game" name="end-game" value="End Game" disabled>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
