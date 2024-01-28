@@ -1,0 +1,172 @@
+This program is my version of the game that can be played at http://siritori-battle.net.
+
+30 Dec 23
+
+    The following is how I expect the user experience to be:
+        - The user presses a button to start the game.
+        - A player is randomly chosen to start the game. (For now, we'll assume Player 1(P1) is the user and Player 2(P2) is the computer.)
+            - We will assume that P1 starts the game; the same structure applies if the computer starts.
+        - A random letter (あ, い, う, え, お, etc) is chosen to start the game.
+            - Henceforth, we will assume that the first character is あ.
+        - P1 will enter their word into an HTML form at the bottom of the screen. The user will be warned that inputting kanji may behave unexpectedly. 
+            - As they enter their word (likely every time a change is detected in the form):
+                - Four checks are made (The word must pass all four checks, and they are in order of increasing resource intensity):
+                    1. The last character will be checked. If that character is ん, then the word is invalid.
+                    2. The word will be checked against the last word. If the words do not overlap properly, then the word is invalid.
+                        - Examples of proper overlap: あい->いちご or あたま->たまご
+                        - Examples of improper overlap: あい->じょせい or あたま->たんじょうび
+                    3. The word will be checked against all words played thus far, and if it matches any (i.e. it is not unique), then the word is invalid.
+                    4. The word is checked against the JMdict .xml file to see if it is a valid word. If it is not (i.e. it doesn't exist in the JMdict file), then the word is invalid.
+                        - If the word is valid, then the computer will take the word's part of speech, and field attributes from the JMdict file.
+                - If the word has passed all four checks, then optinal checks may be conducted using data from the JMdict file (ex: nouns only, etc)
+                    - Special rulesets applied, if they exist.
+                - If the word has passed all previous checks, then, the field attribute from JMdict will be used to determine the "type" of the word. 
+                    - If the word has no field attribute, then it will be given the "normal" type.
+                        - If the word has homonyms, then the "type" of each homonym is determined.
+                    - A little GIF with a picture of the word's type will be displayed to the right of the input field.
+                        - If the word has homonyms, then a "multiple types" GIF will be displayed instead.
+                - Then, the type of P1's word is checked against the type of P2's word, and some text under the GIF image is displayed.
+                    - The text can say: normal damage, strong, weak, or any special effect (poison, restore, swap stat (de)buffs, etc)
+                    - If the word has homonyms, then the text will say "homonym"
+        - When P1 is done with their word, they will submit the form.
+            - If the word provided has homonyms, then a small menu is provided when hovering over the submit button.
+                - The menu shows each word in list form, each with its GIF and outcome prediction.
+                - Clicking on a menu button can submit the form.
+        - Damage is calculated and dealt to the opponent, and special effects are applied.
+        - It becomes the next player's turn.
+
+    The following is a to-do list of what needs to be done to complete this project.
+        
+        Build an HTML page as an interface for testing the Javascript functions.
+
+        Write the function that will takes user input from the HTML form dynamically. (This function is called when form is edited)
+            accepts: HTML form element
+            returns: (String) current text in html form
+        Write the function that will perform the ん check and the overlap check.
+            accepts: (String) the word to be checked; (String) the previous word, in kana
+            returns: (boolean) whether the word passes all the checks
+        
+        Write the function that will find a word in the dictionary and pull the word data if possible, including homonyms. (may be difficult!)
+            accepts: (String) the word to be checked
+            returns: (Array) of (Object) words, if they exist; empty (Array) if the word does not exist
+        Write the function that will find words for the computer to use. (may be difficult!)
+            accepts: (String) the previous word, in kana
+            returns: (Object) an appropriate word
+
+        Write the function that will record words that have been played, into the list for checking words.
+            accepts: (Object) the word to record
+            returns: nothing
+        Write the function that will perform the uniqueness check.
+            accepts: (Object) the word to check
+            returns: (boolean) whether the word is legal
+
+        Write the function that will calculate damage.
+            accepts: (Object) the player's word; (Object) the opponent's previous word
+            returns: (int) the amount of damage to do
+        Write the function that will apply stat changes. (Stat changes will be stored as attributes for each player)
+            accepts: (Object) the player whose stat changes are being applied; (int) the raw damage
+            returns: (int) the damage to be dealt, with stat changes included
+        Write the function that will apply damage.
+            accepts: (Object) the player to apply damage to; (int) the amount of damage to apply
+            returns: nothing
+        Write the function that will apply special effects.
+            accepts: (Object) the player to apply special effects to
+            returns: nothing
+        
+        Write the function that will start the game.
+            accepts: nothing
+            returns: (String) a single kana character
+        Write the function that will execute on wins/losses.
+            accepts: (Object) the player to check
+            returns: (boolean) whether that player's HP is 0
+
+        Build the HTML/CSS that will host the game. (This may be converted from the testing page)
+        Write the function that will handle presentation of the GIF, outcome prediction, etc. dynamically.
+            accepts: (Object) the word to check
+            returns: nothing
+        Write the function that will display the menu for homonyms, and submit words from it.
+            accepts: (Array) of (Object) words
+            returns: nothing
+        
+        Create the GIF files for the types.
+        Create the images that will be used in-game.
+
+    The following is an pseudo-code instance of a Player object.
+        player {
+            hp: 100
+            stat-changes: {
+                atk: 0
+                def: 0
+                max-hp: 0
+            } 
+            effects: {
+                poison: 0
+            }
+        }
+
+    The following is an pseudo-code exmaple of a Word object.
+        word {
+            kana: かな
+            field: (null)
+        }
+
+31 Dec 23
+
+    - Moved all of the JMdict files into ./JMdict for organization
+    - Replaced the JMdict.xml file with the jmdict-eng-common-3.5.0.json file in hopes of faster performance
+    - Added a .7z file in the JMdict folder that contains the .xml file, as well as .json files for the common and full dictionaries
+    
+    - Created index.html, style.css, and main.js, as well as a ./lib folder for javascript function files (the code will ideally be segmented)
+
+1 Jan 23
+
+    - Converted dictionary file into a .js file because of CORS restrictions on the file:/// protocol blocking JavaScript access to the .json 
+    - All .js files from the library will be called into the HTML using <script> tags
+    - The entire .js library will be bundled into one file at the end of the project
+    - Each .js file in the /lib folder has a constant at the top prefixed with c_ (for "check"), which will be used to check if the file is accessible by the program
+
+2 Jan 23
+
+    - Updated the .js file that contained the dictionary, as the old one was incomplete
+    - Added but did not implement functions for searching the dictionary by word ID or kana reading
+
+3 Jan 23
+
+    - A function to take user input from the HTML form dynamically is not necessary; the 'oninput' attribute will be used in the text box instead
+    - Wrote (but did not test!) functions to check for ん at the end, and word overlap
+
+4 Jan 23
+
+    - Tested check functions
+    - Updated the jmDictSearch function to return an array of all words that match the reading, including homonyms
+    - Wrote a very basic function to generate a continuation from a previous word
+
+6 Jan 23
+
+    - Added a placeholder for the word homonym selection menu type thing in the html file
+
+7 Jan 23
+
+    - Reformatted the html page to better reflect the ideal end product
+    - For right now, there is no rubytext, which might be implemented later
+    - Implemented the word selection menu thing
+    - Implemented the computer word generation
+    - All in all, made good progress on the actual shiritori part of the game
+    - HP, as well as win/loss conditions still need to be implemented
+    - A loss condition should be programmed when there are no compatible words
+    - Leniency should be programmed for characters such as ゃ, ゅ, ょ, ー
+
+14 Jan 23
+
+    - Did some major debugging
+    - Added interpretation of small kana and the vowel extender
+    - Added a way to start and end the game
+
+21 Jan 23
+
+    - Refactored the HTML to have less onclick attributes
+    - Upgraded the CSS
+
+27 Jan 23
+
+    - 

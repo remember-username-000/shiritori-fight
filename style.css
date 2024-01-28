@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    border: 2px solid #777777;
+}
+
+#main-game {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 75%;
+    border: 2px solid #0000ff;
+    overflow: auto;
+    padding-left: 1em;
+    padding-top: 0;
+}
+
+#user-input {
+    border: 2px solid #777777;
+}
+
+#user-word-interface {
+    position: absolute;
+    bottom: 1em;
+}
+
+#user-get {
+    position: relative;
+    display: inline-block;
+}
+
+#word-select-menu {
+    position: absolute;
+    width: 100px;
+    height: fit-content;
+    border: 2px solid #00ff00;
+    display: none;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.word-select-menu-item {
+    background: #ffffff;
+}
+
+.word-select-menu-item:hover {
+    background: #eeeeee;
+    cursor: pointer;
+}
+
+.panel {
+    position: absolute;
+}
+
+#right-panel {
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100%;
+    border: 2px solid #ff0000;
+}
+
+#word-history {
+    padding-left: 1em;
+    overflow: auto;
+    display: none;
+}
+
+#bottom-panel {
+    bottom: 0;
+    left: 0;
+    width: 75%;
+    height: 25%;
+    border: 2px solid #00ff00;
+}
+
+#bottom-panel .panel-contents {
+    position: absolute;
+    padding-left: 2em;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: calc(100% - 3em);
+    overflow: auto;
+    display: none;
+}
+
+.panel-menu-tab-text {
+    display: inline-block;
+    padding: 0.5em;
+    margin: 0;
+    color: #777777;
+}
+
+.panel-menu-tab-text:hover {
+    cursor: pointer;
+}
+
+.panel-menu-bar {
+    padding-left: 1em;
+    background: #eeeeee;
+}
