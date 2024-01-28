@@ -3,13 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
-This project is NOT an API, and thus does not declare a public API. Therefore, it does NOT adhere to [Semantic Versioning](https://semver.org/spec/v2.0.0.html), although the versioning specifications given there are followed.
+This project is NOT an API, and thus does not declare a public API. Therefore, it does NOT adhere to [Semantic Versioning](https://semver.org/spec/v2.0.0.html), although the versioning guidelines given there are followed.
 
-## \[Unreleased\]
+## [Unreleased]
 
-## \[0.0.0\] - 2024-01-28
+## [0.0.0] - 2024-01-28
 
-Any versions before this one were developed before migrating the project to GitHub.
+Any versions before this one were developed before migrating the project to GitHub, and therefore don't have links to the corresponding releases.
 
 ### Added
 
@@ -26,7 +26,7 @@ Any versions before this one were developed before migrating the project to GitH
 - program-structure.txt, which served as the changelog before this migration, will no longer host the changelog.
     - The file is still available, even though all its information is also here.
 
-## \[0.0.0-rc\] - 2024-01-21
+## 0.0.0-rc - 2024-01-21
 
 ### Added
 
@@ -36,7 +36,7 @@ Any versions before this one were developed before migrating the project to GitH
 
 - Refactored the HTML page to use less onclick attributes, instead establishing these as event listeners from main.js.
 
-## \[0.0.0-beta\] - 2024-01-14
+## 0.0.0-beta - 2024-01-14
 
 ### Added
 
@@ -54,7 +54,7 @@ Any versions before this one were developed before migrating the project to GitH
 - Fixed an issue that sometimes premanently disabled the player.
 - Fixed an issue that would break the game if trying to generate a word beginning with small kana or vowel extenders.
 
-## \[0.0.0-alpha\] - 2024-01-07
+## 0.0.0-alpha - 2024-01-07
 
 ### Added
 
@@ -82,3 +82,6 @@ Any versions before this one were developed before migrating the project to GitH
     - Created findNextWord.js, which contains functions for generating a word that continues the game.
     - Created handleInput.js. which contains functions for manipulating the homonym selection menu, as well as preventing the player from submitting illegal words.
     - Created manageGame.js, which contains the functions that start and end the game.
+
+[Unreleased]: https://github.com/remember-username-000/shiritori-fight/compare/main...v0.0.0?diff=unified
+[0.0.0]: https://github.com/remember-username-000/shiritori-fight/releases/tag/v0.0.0
