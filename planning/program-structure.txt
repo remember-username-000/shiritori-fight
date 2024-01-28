@@ -169,4 +169,5 @@ This program is my version of the game that can be played at http://siritori-bat
 
 27 Jan 23
 
-    - 
+    - Migrated the project to a GitHub repository
+    - Created a changelog, CHANGELOG.md
