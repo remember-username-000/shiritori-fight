@@ -15,6 +15,7 @@
             <script src="lib/findNextWord.js"></script>
             <script src="lib/handleInput.js"></script>
             <script src="lib/manageGame.js"></script>
+            <script src="lib/classes.js"></script>
             
             <script src="lib/updatePage.js"></script>
 
@@ -23,18 +24,26 @@
         <main>
             <div id="container">
                 <div id="main-game">
-                    <p>qweiuy</p>
-                    <p>sldkfj</p>
-                    <br><br>
-                        <div id="user-word-interface">
-                            <label for="word-input">Input word:</label> <br>
-                            <input type="text" id="word-input" name="word-input" disabled>
-                            <div id="user-get">
-                                <input type="button" id="get" name="get" value="Get" disabled>
-                                <div id="word-select-menu">
-                                </div>
+                    <div id="main-graphics">
+                        <div class="stats-area opponent-stats">
+                            <p>Opponent:</p>
+                            <p class="hp-text opponent-stats">eee</p>
+                        </div>
+                        <br><br>
+                        <div class="stats-area player-stats">
+                            <p>Me: </p>
+                            <p class="hp-text player-stats">eee</p>
+                        </div>
+                    </div>
+                    <div id="user-word-interface">
+                        <label for="word-input">Input word:</label> <br>
+                        <input type="text" id="word-input" name="word-input" disabled>
+                        <div id="user-get">
+                            <input type="button" id="get" name="get" value="Get" disabled>
+                            <div id="word-select-menu">
                             </div>
                         </div>
+                    </div>
                 </div>
                 <div class="panel" id="right-panel">
                     <div class="panel-menu-bar">

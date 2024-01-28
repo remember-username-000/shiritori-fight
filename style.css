@@ -25,13 +25,14 @@ body, html {
     padding-top: 0;
 }
 
-#user-input {
-    border: 2px solid #777777;
-}
-
 #user-word-interface {
     position: absolute;
-    bottom: 1em;
+    padding: 1em 0;
+    bottom: 0;
+}
+
+#user-input {
+    border: 2px solid #777777;
 }
 
 #user-get {
