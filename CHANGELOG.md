@@ -26,7 +26,7 @@ Any versions before this one were developed before migrating the project to GitH
 - program-structure.txt, which served as the changelog before this migration, will no longer host the changelog.
     - The file is still available, even though all its information is also here.
 
-## \[0.0.0-rc\]
+## \[0.0.0-rc\] - 2024-01-21
 
 ### Added
 
@@ -36,9 +36,9 @@ Any versions before this one were developed before migrating the project to GitH
 
 - Refactored the HTML page to use less onclick attributes, instead establishing these as event listeners from main.js.
 
-## \[0.0.0-beta\]
+## \[0.0.0-beta\] - 2024-01-14
 
-## Added
+### Added
 
 - The bottom and right panels now have navbars at the tops (even though the right panel only has one nav right now)
     - Content in these panels are now menus that can be changed via the navbar.
@@ -54,7 +54,7 @@ Any versions before this one were developed before migrating the project to GitH
 - Fixed an issue that sometimes premanently disabled the player.
 - Fixed an issue that would break the game if trying to generate a word beginning with small kana or vowel extenders.
 
-## \[0.0.0-alpha\] - 2024-14-01
+## \[0.0.0-alpha\] - 2024-01-07
 
 ### Added
 
