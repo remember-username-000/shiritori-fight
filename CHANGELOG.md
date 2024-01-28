@@ -1,0 +1,84 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
+This project is NOT an API, and thus does not declare a public API. Therefore, it does NOT adhere to [Semantic Versioning](https://semver.org/spec/v2.0.0.html), although the versioning specifications given there are followed.
+
+## \[Unreleased\]
+
+## \[0.0.0\] - 2024-01-27
+
+Any versions before this one were developed before migrating the project to GitHub.
+
+### Added
+
+- This CHANGELOG.md file, which contains a chronologically ordered list of notable changes (even the ones that were made before this project was on GitHub!). All new changes will be documented here, so the old program-structure.txt file will not be used for this purpose anymore.
+    - Retroactively filled CHANGELOG.md to reflect development before migration.
+- README.md, which contains information about this project.
+
+### Changed
+
+- Project migrated to a GitHub repository (it was previously chilling in my file system, but I think GitHub is a better place for it). This should not affect functionality.
+
+### Deprecated
+
+- program-structure.txt, which served as the changelog before this migration, will no longer host the changelog.
+    - The file is still available, even though all its information is also here.
+
+## \[0.0.0-rc\]
+
+### Added
+
+- Added rulesets in style.css to make menu transition in the side and bottom panels more apparent/intuitive.
+
+### Changed
+
+- Refactored the HTML page to use less onclick attributes, instead establishing these as event listeners from main.js.
+
+## \[0.0.0-beta\]
+
+## Added
+
+- The bottom and right panels now have navbars at the tops (even though the right panel only has one nav right now)
+    - Content in these panels are now menus that can be changed via the navbar.
+- Added a game log to the bottom menu, which tells the player when a game has started or ended.
+
+### Changed
+
+- Dictionary searching functions now treat small kana and vowel extenders appropriately.
+
+### Fixed
+
+- Fixed issues allowing already played words to be played again.
+- Fixed an issue that sometimes premanently disabled the player.
+- Fixed an issue that would break the game if trying to generate a word beginning with small kana or vowel extenders.
+
+## \[0.0.0-alpha\] - 2024-14-01
+
+### Added
+
+- Created program-structure.txt, which contained my initial outline and plan for this project(may not reflect end product), as well as serving as a changelog.
+- Created diagram.png, which is a visual representation of the outline in program-structure.txt.
+- Created the /JMdict folder, which contained the .json version of JMdict-common.
+    - Created a copy of the jmdict-eng-common-3.5.0.json, which was converted into a .js file.
+    - Created a .7z file, which contained the original JMdict files (which were larger). At some point, the project is intended to switch from the common words dictionary to the full dictionary, when the program is more developed.
+- Created index.html.
+    - Added script tags to link all of the .js files.
+    - Added form elements that allow the player to submit a word. If the player submits a word with multiple meanings, then a menu pops up allowing them to select the desired one.
+    - Separated the page into a main game area, and two panels.
+    - The side panel now contains a list of previously played words.
+    - The bottom panel now contains buttons for starting and ending the gamel
+- Created style.css.
+    - Added rulesets which define the borders of teh main game area and the panels.
+    - Added rulesets that make the homonym selection menu more apparent/intuitive.
+- Created main.js.
+    - Created the onLoad function for the HTML site.
+    - Created functions to log to the console when resources are ready.
+- Created the /lib folder, which contained the .js files necessary for the program:
+    - Most of the functions return and accept words in the form of an object that consists of the original word object, and an integer pointing to the kana reading of that word. Some of these functions return or accept arrays of these objects.
+    - Created jmDictSearch.js, which contains functions for finding words in the dictionary file, using various search parameters.
+    - Created checkWordIsValid.js, which contains functions that check if a word follows shiritori rules.
+    - Created findNextWord.js, which contains functions for generating a word that continues the game.
+    - Created handleInput.js. which contains functions for manipulating the homonym selection menu, as well as preventing the player from submitting illegal words.
+    - Created manageGame.js, which contains the functions that start and end the game.
