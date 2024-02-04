@@ -9,7 +9,7 @@ This project is NOT an API, and thus does not declare a public API. Therefore, i
 
 ### Added
 
-- Added an HP system that starts both players with 100 HP, and takes away 40 HP when a word is played
+- Added an HP system that starts both players with 100 HP, and takes away 10 HP when a word is played
 - Added HTML elements to the game to display the HP (only numbers right now)
 
 ## [0.0.0] - 2024-01-28
