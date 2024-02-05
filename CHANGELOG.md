@@ -12,6 +12,11 @@ This project is NOT an API, and thus does not declare a public API. Therefore, i
 - Added an HP system that starts both players with 100 HP, and takes away 10 HP when a word is played
 - Added HTML elements to the game to display the HP (only numbers right now)
 
+### Changed
+
+- Side and bottom panels now scrollbar correctly
+- Game log now tells you what you (or the opponent) did
+
 ## [0.0.0] - 2024-01-28
 
 Any versions before this one were developed before migrating the project to GitHub, and therefore don't have links to the corresponding releases.
