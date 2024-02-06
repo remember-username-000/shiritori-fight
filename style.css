@@ -84,6 +84,7 @@ body, html {
 
 .panel {
     position: absolute;
+    overflow: auto;
 }
 
 #right-panel {
