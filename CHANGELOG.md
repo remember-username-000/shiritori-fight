@@ -11,6 +11,8 @@ This project is NOT an API, and thus does not declare a public API. Therefore, i
 
 - Added an HP system that starts both players with 100 HP, and takes away 10 HP when a word is played
 - Added HTML elements to the game to display the HP (only numbers right now)
+- Added an option to clear the game's log when starting a new game
+- Added the ability for the player to change their and their oppponent's name
 
 ### Changed
 
