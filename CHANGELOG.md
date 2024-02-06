@@ -13,6 +13,7 @@ This project is NOT an API, and thus does not declare a public API. Therefore, i
 - Added HTML elements to the game to display the HP (only numbers right now)
 - Added an option to clear the game's log when starting a new game
 - Added the ability for the player to change their and their oppponent's name
+- Added placeholder text in the word input box that tells you what character to play off of
 
 ### Changed
 
