@@ -15,6 +15,7 @@ function onLoad () {
     checkAccess(c_findNextWord);
     checkAccess(c_updatePage);
     checkAccess(c_classes);
+    //manageGame has no const for this, probably should add one!
 
     document.getElementById('word-input').addEventListener('input', onUserInput);
     document.getElementById('get').addEventListener('mouseenter', userGetHover);
