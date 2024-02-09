@@ -14,11 +14,14 @@ This project is NOT an API, and thus does not declare a public API. Therefore, i
 - Added an option to clear the game's log when starting a new game
 - Added the ability for the player to change their and their oppponent's name
 - Added placeholder text in the word input box that tells you what character to play off of
+- Added debugFunctions.js, which will contain functions useful for debugging
 
 ### Changed
 
 - Side and bottom panels now scrollbar correctly
 - Game log now tells you what you (or the opponent) did
+- When a kana reading corresponds to a specific kanji writing, game no longer displays 'kana apply to specific kanji' and instead displays the appropaiate kanji
+- Word selection menu for homophones now give the correct kanji, when kana readings are associated with specific ones
 
 ## [0.0.0] - 2024-01-28
 
