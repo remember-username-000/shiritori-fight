@@ -1,0 +1,108 @@
+The available field tags in JMdict, mapped to different types.
+Types shown in order of typemat.png
+
+business
+    bus business
+    internet Internet
+    law law
+    mining mining
+    politics politics
+    rail railway
+    stockm stock market
+    telec telecommunications
+    tradem trademark
+
+science
+    agric agriculture
+    anat anatomy
+    archeol archeology
+    astron astronomy
+    biochem biochemistry
+    biol biology
+    bot botany
+    chem chemistry
+    civeng civil engineering
+    comp computing
+    cryst crystallography
+    ecol ecology
+    elec electricity, elec. eng.
+    electr electronics
+    embryo embryology
+    engr engineering
+    ent entomology
+    genet genetics
+    geol geology
+    mech mechanical engineering
+    met meteorology
+    min mineralogy
+    ornith ornithology
+    paleo paleontology
+    pathol pathology
+    pharm pharmacology
+    phil philosophy
+    physics physics
+    physiol physiology
+    psy psychiatry
+    psyanal psychoanalysis
+    psych psychology
+    zool zoology
+
+art
+    archit architecture
+    art art, aesthetics
+    audvid audiovisual
+    Buddh Buddhism
+    chmyth Chinese mythology
+    Christn Christianity
+    cloth clothing
+    figskt figure skating
+    film film
+    food food, cooking
+    gramm grammar
+    grmyth Greek mythology
+    jpmyth Japanese mythology
+    kabuki kabuki
+    ling linguistics
+    MA martial arts
+    manga manga
+    music music
+    noh noh
+    photo photography
+    print printing
+    rommyth Roman mythology
+    Shinto Shinto
+    tv television
+
+sports
+    aviat aviation
+    baseb baseball
+    boxing boxing
+    cards card games
+    fish fishing
+    go go (game)
+    golf golf
+    hanaf hanafuda
+    horse horse racing
+    mahj mahjong
+    motor motorsport
+    prowres professional wrestling
+    shogi shogi
+    ski skiing
+    sports sports
+    sumo sumo
+    vidg video games
+
+normal
+    dent dentistry
+    econ economics
+    finc finance
+    gardn gardening, horticulture
+    geogr geography
+    geom geometry
+    logic logic
+    math mathematics
+    med medicine
+    mil military
+    stat statistics
+    surg surgery
+    vet veterinary terms

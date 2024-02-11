@@ -15,6 +15,7 @@ This project is NOT an API, and thus does not declare a public API. Therefore, i
 - Added the ability for the player to change their and their oppponent's name
 - Added placeholder text in the word input box that tells you what character to play off of
 - Added debugFunctions.js, which will contain functions useful for debugging
+- Added a typemat in the planning folder
 
 ### Changed
 
