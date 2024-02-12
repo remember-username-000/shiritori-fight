@@ -16,6 +16,7 @@ This project is NOT an API, and thus does not declare a public API. Therefore, i
 - Added placeholder text in the word input box that tells you what character to play off of
 - Added debugFunctions.js, which will contain functions useful for debugging
 - Added a typemat in the planning folder
+- Words now have types, and playing specific type words against others can either be stronger, weaker, or normal
 
 ### Changed
 
