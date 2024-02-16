@@ -106,6 +106,17 @@ body, html {
     display: none;
 }
 
+#word-history .type-preview {
+    vertical-align: top;
+    margin-right: 1em;
+}
+
+#word-history .word-history-entry {
+    display: inline-block;
+    margin: 0;
+    width: calc(100% - 2em);
+}
+
 #bottom-panel {
     bottom: 0;
     left: 0;
