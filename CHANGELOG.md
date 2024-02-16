@@ -9,14 +9,22 @@ This project is NOT an API, and thus does not declare a public API. Therefore, i
 
 ### Added
 
-- Added an HP system that starts both players with 100 HP, and takes away 10 HP when a word is played
+- Added an HP system that starts both players with 100 HP, and each word deals 10 damage
 - Added HTML elements to the game to display the HP (only numbers right now)
 - Added an option to clear the game's log when starting a new game
 - Added the ability for the player to change their and their oppponent's name
 - Added placeholder text in the word input box that tells you what character to play off of
 - Added debugFunctions.js, which will contain functions useful for debugging
 - Added a typemat in the planning folder
-- Words now have types, and playing specific type words against others can either be stronger, weaker, or normal
+- Words now have types!
+    - Types have strengths and weaknesses against each other. Playing a word with a type that is strong against the opponent's previous word deals extra damage, and vice versa
+    - Introduced 5 new types and mapped JMdict's "field" attributes to them. Each type also has an associated letter:
+        - (Ｂ) Business
+        - (Ｓ) Science
+        - (Ａ) Art
+        - (Ｐ) Sports
+        - (Ｎ )Normal
+    - Untyped (Ｕ) words behave like normal type words.
 
 ### Changed
 
