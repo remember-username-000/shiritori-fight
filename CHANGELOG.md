@@ -7,6 +7,10 @@ This project is NOT an API, and thus does not declare a public API. Therefore, i
 
 ## [Unreleased]
 
+### Added
+
+### Changed
+
 ## [1.0.0-alpha] - 2024-02-16
 
 ### Added
