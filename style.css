@@ -62,6 +62,10 @@ body, html {
     display: inline-block;
 }
 
+.type-preview {
+    display: inline;
+}
+
 #word-select-menu {
     position: absolute;
     width: 100px;
@@ -97,8 +101,20 @@ body, html {
 
 #word-history {
     padding-left: 1em;
+    padding-top: 1em;
     overflow: auto;
     display: none;
+}
+
+#word-history .type-preview {
+    vertical-align: top;
+    margin-right: 1em;
+}
+
+#word-history .word-history-entry {
+    display: inline-block;
+    margin: 0;
+    width: calc(100% - 2em);
 }
 
 #bottom-panel {
