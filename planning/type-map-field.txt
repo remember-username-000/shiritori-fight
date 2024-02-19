@@ -14,7 +14,6 @@ business
 
 science
     agric agriculture
-    anat anatomy
     archeol archeology
     astron astronomy
     biochem biochemistry
@@ -27,7 +26,6 @@ science
     ecol ecology
     elec electricity, elec. eng.
     electr electronics
-    embryo embryology
     engr engineering
     ent entomology
     genet genetics
@@ -37,10 +35,7 @@ science
     min mineralogy
     ornith ornithology
     paleo paleontology
-    pathol pathology
-    pharm pharmacology
     physics physics
-    physiol physiology
     psy psychiatry
     zool zoology
 
@@ -62,6 +57,16 @@ art
     photo photography
     print printing
     tv television
+
+medical
+    anat anatomy
+    dent dentistry
+    embryo embryology
+    med medicine
+    pathol pathology
+    pharm pharmacology
+    physiol physiology
+    surg surgery
 
 religion
     Buddh Buddhism
@@ -95,7 +100,6 @@ sports
     vidg video games
 
 normal
-    dent dentistry
     econ economics
     finc finance
     gardn gardening, horticulture
@@ -103,8 +107,6 @@ normal
     geom geometry
     logic logic
     math mathematics
-    med medicine
     mil military
     stat statistics
-    surg surgery
     vet veterinary terms
