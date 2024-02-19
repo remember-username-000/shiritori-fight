@@ -24,28 +24,40 @@
     <body onload="onLoad();">
         <main>
             <div id="container">
+
                 <div id="main-game">
-                    <div id="main-graphics">
-                        <div class="stats-area opponent-stats">
-                            <p class="player-name for-opponent">Opponent</p>
-                            <p class="hp-text opponent-stats"></p>
-                        </div>
-                        <br><br>
-                        <div class="stats-area player-stats">
-                            <p class="player-name for-you">You</p>
-                            <p class="hp-text player-stats"></p>
+                    <div class="stats-area opponent-stats">
+                        <p class="player-name for-opponent">Opponent</p>
+                        <div class="hp-bar opponent-stats"></div>
+                        <div class="hp-text-container">
+                            <span class="hp-text opponent-stats"></span>
+                            /100
                         </div>
                     </div>
+                    <div class="stats-area player-stats">
+                        <p class="player-name for-you">You</p>
+                        <div class="hp-bar player-stats"></div>
+                        <div class="hp-text-container">
+                            <span class="hp-text player-stats"></span>
+                            /100
+                        </div>
+                    </div>
+
+                    <div>
+                        <!---->
+                    </div>
+
                     <div id="user-word-interface">
-                        <label for="word-input">Input word:</label> <br>
+                        <!-- <label for="word-input">Input word:</label> <br> -->
                         <input type="text" id="word-input" name="word-input" placeholder="" disabled>
                         <div id="user-get">
+                            <p class="type-preview" id="player-ui-type-preview">　</p>
                             <input type="button" id="get" name="get" value="Get" disabled>
                             <div id="word-select-menu"></div>
-                            <p class="type-preview" id="player-ui-type-preview">　</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="panel" id="right-panel">
                     <div class="panel-menu-bar">
                         <p class="panel-menu-tab-text class-word-history">Words</p>
