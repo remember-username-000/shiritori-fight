@@ -39,28 +39,20 @@ science
     paleo paleontology
     pathol pathology
     pharm pharmacology
-    phil philosophy
     physics physics
     physiol physiology
     psy psychiatry
-    psyanal psychoanalysis
-    psych psychology
     zool zoology
 
 art
     archit architecture
     art art, aesthetics
     audvid audiovisual
-    Buddh Buddhism
-    chmyth Chinese mythology
-    Christn Christianity
     cloth clothing
     figskt figure skating
     film film
     food food, cooking
     gramm grammar
-    grmyth Greek mythology
-    jpmyth Japanese mythology
     kabuki kabuki
     ling linguistics
     MA martial arts
@@ -69,9 +61,19 @@ art
     noh noh
     photo photography
     print printing
+    tv television
+
+religion
+    Buddh Buddhism
+    chmyth Chinese mythology
+    Christn Christianity
+    grmyth Greek mythology
+    jpmyth Japanese mythology
+    phil philosophy
+    psyanal psychoanalysis
+    psych psychology
     rommyth Roman mythology
     Shinto Shinto
-    tv television
 
 sports
     aviat aviation
