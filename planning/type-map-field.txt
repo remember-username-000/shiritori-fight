@@ -12,27 +12,31 @@ business
     telec telecommunications
     tradem trademark
 
-science
+plant (and earth, for now)
     agric agriculture
+    biochem biochemistry
+    bot botany
+    cryst crystallography           //
+    ecol ecology
+    gardn gardening, horticulture
+    geogr geography                 //
+    geol geology                    //
+    met meteorology                 //
+    min mineralogy                  //
+
+science
     archeol archeology
     astron astronomy
-    biochem biochemistry
     biol biology
-    bot botany
     chem chemistry
     civeng civil engineering
     comp computing
-    cryst crystallography
-    ecol ecology
     elec electricity, elec. eng.
     electr electronics
     engr engineering
     ent entomology
     genet genetics
-    geol geology
     mech mechanical engineering
-    met meteorology
-    min mineralogy
     ornith ornithology
     paleo paleontology
     physics physics
@@ -102,8 +106,6 @@ sports
 normal
     econ economics
     finc finance
-    gardn gardening, horticulture
-    geogr geography
     geom geometry
     logic logic
     math mathematics
