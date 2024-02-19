@@ -12,7 +12,8 @@ This project is NOT an API, and thus does not declare a public API. Therefore, i
 ### Changed
 
 - The player that starts the game is now randomized
-- The starting word is mow random
+- The starting word is now random
+- The function that selects words for the computer to use is probably more performant now
 
 ## [1.0.0-alpha] - 2024-02-16
 
