@@ -9,6 +9,11 @@ This project is NOT an API, and thus does not declare a public API. Therefore, i
 
 ### Added
 
+- Three new types!
+    - (Ｌ) Plant
+    - (Ｍ) Medical
+    - (Ｒ) Religion
+
 ### Changed
 
 - The player that starts the game is now randomized
@@ -33,7 +38,7 @@ This project is NOT an API, and thus does not declare a public API. Therefore, i
         - (Ｓ) Science
         - (Ａ) Art
         - (Ｐ) Sports
-        - (Ｎ )Normal
+        - (Ｎ) Normal
     - Untyped (Ｕ) words behave like normal type words.
 
 ### Changed
