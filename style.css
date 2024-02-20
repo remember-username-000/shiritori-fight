@@ -20,7 +20,7 @@ body, html {
     width: 75%;
     height: 75%;
     border: 2px solid #0000ff;
-    overflow: auto;
+    overflow: hidden;
     padding-top: 0;
 }
 
@@ -61,6 +61,62 @@ body, html {
 .hp-bar.player-stats {
     margin-left: auto;
     margin-right: 0;
+}
+
+.player-current-word-container {
+    position: absolute;
+    width: 128px;
+    height: 64px;
+}
+
+.player-current-word-container .current-word-inner-container {
+    position: relative;
+    width: fit-content;
+    left: 50%;
+}
+
+.player-current-word-container .current-word-display {
+    margin: 0 0 0 -50%;
+    font-size: 32px;
+    line-height: 64px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.player-current-word-container.for-opponent {
+    top: calc(10% + 96px);
+    left: 30%;
+}
+
+.player-current-word-container.for-you {
+    bottom: calc(20% + 96px);
+    right: 30%;
+}
+
+.player-current-word-container .type-preview {
+    position: absolute;
+    font-size: 48px;
+    opacity: 0.2;
+    height: 64px;
+    width: 48px;
+    left: 0;
+    right: 0;
+    margin: 0 auto 0 auto;
+    z-index: -1;
+}
+
+.player-current-word-container .current-word-display-shading {
+    position: absolute;
+    z-index: -2;
+    height: 32px;
+    width: 128px;
+    background: #000000;
+    opacity: 0.1;
+    border-radius: 50%;
+    bottom: -16px;
+    left: 0;
+    right: 0;
+    margin: 0 auto 0 auto;
 }
 
 #user-word-interface {
