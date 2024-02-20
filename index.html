@@ -28,7 +28,9 @@
                 <div id="main-game">
                     <div class="stats-area opponent-stats">
                         <p class="player-name for-opponent">Opponent</p>
-                        <div class="hp-bar opponent-stats"></div>
+                        <div class="hp-bar-container">
+                            <div class="hp-bar for-opponent" id="hp-bar-opponent"></div>
+                        </div>
                         <div class="hp-text-container">
                             <span class="hp-text opponent-stats"></span>
                             /100
@@ -36,7 +38,9 @@
                     </div>
                     <div class="stats-area player-stats">
                         <p class="player-name for-you">You</p>
-                        <div class="hp-bar player-stats"></div>
+                        <div class="hp-bar-container for-you">
+                            <div class="hp-bar for-you" id="hp-bar-you"></div>
+                        </div>
                         <div class="hp-text-container">
                             <span class="hp-text player-stats"></span>
                             /100

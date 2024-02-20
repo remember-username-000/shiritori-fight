@@ -52,13 +52,21 @@ body, html {
     margin-top: 4px;
 }
 
-.hp-bar {
+.hp-bar-container {
     height: 4px;
     width: 200px;
     background: #ff0000;
+    padding: 0;
 }
 
-.hp-bar.player-stats {
+.hp-bar {
+    height: 4px;
+    width: 0;
+    background: #00ff00;
+    margin: 0;
+}
+
+.hp-bar-container.for-you {
     margin-left: auto;
     margin-right: 0;
 }
