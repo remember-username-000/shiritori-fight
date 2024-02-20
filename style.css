@@ -117,6 +117,7 @@ body, html {
     left: 0;
     right: 0;
     margin: 0 auto 0 auto;
+    display: none;
 }
 
 #user-word-interface {
@@ -156,12 +157,12 @@ body, html {
 
 #word-select-menu {
     position: absolute;
-    width: 100px;
+    min-width: 128px;
     height: fit-content;
     border: 2px solid #00ff00;
     display: none;
     bottom: 0;
-    left: 0;
+    right: 0;
     background-color: #ffffff;
 }
 
