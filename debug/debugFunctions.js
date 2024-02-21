@@ -37,6 +37,9 @@ function debug_addWordTypeEntry (num) {
     let text = ("(" + charFromType(getWordType(target.word)) + ") " + header + ":");
     for (let i = 0; i < target.word.sense.length; i++) {
         text += ("\n    " + (i + 1) + ". ");
+        if (target.word.sense[i].field[0]) {
+            text += "(" + target.word.sense[i].field[0] + ") ";
+        }
         for (let j = 0; j < target.word.sense[i].gloss.length; j++) {
             text += (target.word.sense[i].gloss[j].text);
             if ((j == (target.word.sense[i].gloss.length - 1)) && (i == (target.word.sense.length - 1))) {
@@ -48,14 +51,15 @@ function debug_addWordTypeEntry (num) {
             }
         }
     }
-    text += "\n\nWhat type should this word be? (0-24)";
+    text += "\n\nWhat type should this word be? (0-24, or -1 to restore default)";
     let userType = prompt(text);
     if ((isNaN(parseInt(userType))) || (parseInt(userType) < -1) || (parseInt(userType) > 24)) {
-        let again = prompt("Invalid input. Type anything to retry or press Enter to continue.");
-        if (!again) {
+        let doContinue = prompt("Invalid input. Type anything to continue or press Enter to retry.");
+        if (!doContinue) {
+            debug_addWordTypeEntry (num);
             return;
         } else {
-            debug_addWordTypeEntry (num);
+            return;
         }
     }
 
