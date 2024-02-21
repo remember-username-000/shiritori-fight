@@ -15,12 +15,17 @@ This project is NOT an API, and thus does not declare a public API. Therefore, i
     - (Ｒ) Religion
 - Currently played words are now visible in the main game area
 - Added an HP bar to visually see HP
+- Types automatically assigned to words can now be overridden with the data-wordTypes.js file
+- Added new debug functions to facilitate manually assigning types to words
+- addType.java for making changes to data-wordTypes.js.
 
 ### Changed
 
 - The player that starts the game is now randomized
 - The starting word is now random
 - The function that selects words for the computer to use is probably more performant now
+- Moved debugFunctions.js to the debug/ folder
+- Renamed debug functions to have the "debug_" prefix
 
 ## [1.0.0-alpha] - 2024-02-16
 
