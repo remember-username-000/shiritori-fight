@@ -51,8 +51,12 @@ function debug_addWordTypeEntry (num) {
     text += "\n\nWhat type should this word be? (0-24)";
     let userType = prompt(text);
     if ((isNaN(parseInt(userType))) || (parseInt(userType) < -1) || (parseInt(userType) > 24)) {
-        alert("Invalid input");
-        return;
+        let again = prompt("Invalid input. Type anything to retry or press Enter to continue.");
+        if (!again) {
+            return;
+        } else {
+            debug_addWordTypeEntry (num);
+        }
     }
 
     if (debug_newWordTypeEntries[0].includes(target.word.id)) {
@@ -60,6 +64,12 @@ function debug_addWordTypeEntry (num) {
     } else {
         debug_newWordTypeEntries[0].push(target.word.id);
         debug_newWordTypeEntries[1].push(parseInt(userType));
+    }
+}
+
+function debug_addAllTypeEntries () {
+    for (let i = 0; i < wordsPlayed.length; i++) {
+        debug_addWordTypeEntry(i);
     }
 }
 
