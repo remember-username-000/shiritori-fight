@@ -18,7 +18,7 @@ function debug_playedWordsHasDuplicates () {
     return false;
 }
 
-let debug_newWordTypeEntries = [];
+let debug_newWordTypeEntries = [[], []];
 
 function debug_addWordTypeEntry (num) {
     let target = wordsPlayed[wordsPlayed.length - (num + 1)];
@@ -50,15 +50,23 @@ function debug_addWordTypeEntry (num) {
     }
     text += "\n\nWhat type should this word be? (0-24)";
     let userType = prompt(text);
-    if ((parseInt(userType) >= 0) && (parseInt(userType) <= 24)) {
-        debug_newWordTypeEntries.push([target.word.id, parseInt(userType)]);
+    if ((isNaN(parseInt(userType))) || (parseInt(userType) < -1) || (parseInt(userType) > 24)) {
+        alert("Invalid input");
+        return;
+    }
+
+    if (debug_newWordTypeEntries[0].includes(target.word.id)) {
+        debug_newWordTypeEntries[1][debug_newWordTypeEntries[0].indexOf(target.word.id)] = parseInt(userType);
+    } else {
+        debug_newWordTypeEntries[0].push(target.word.id);
+        debug_newWordTypeEntries[1].push(parseInt(userType));
     }
 }
 
 function debug_printNewEntries () {
     let print = ">";
-    for (let i = 0; i < debug_newWordTypeEntries.length; i++) {
-        print += (debug_newWordTypeEntries[i][0] + ":" + debug_newWordTypeEntries[i][1] + ",");
+    for (let i = 0; i < debug_newWordTypeEntries[0].length; i++) {
+        print += (debug_newWordTypeEntries[0][i] + ":" + debug_newWordTypeEntries[1][i] + ",");
     }
     print += "<";
     console.log(print);
