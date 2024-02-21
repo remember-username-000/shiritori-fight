@@ -5,7 +5,7 @@ public class addType {
     public static void main (String [] args) {
         ArrayList<String []> dataArray = new ArrayList<String []>();
         try {
-            File typeList = new File ("lib/data-wordTypes.js");
+            File typeList = new File ("../lib/data-wordTypes.js");
             Scanner fileRead = new Scanner(typeList);
             while (fileRead.hasNextLine()) {
                 String nextLine = fileRead.nextLine();
@@ -79,7 +79,7 @@ public class addType {
         }
 
         try {
-            File typeList = new File ("lib/data-wordTypes.js");
+            File typeList = new File ("../lib/data-wordTypes.js");
             FileWriter fileWrite = new FileWriter(typeList);
             fileWrite.write("const data_wordTypeList = \n{\n");
             for (int i = 0; i < (dataArray.size() - 1); i++) {
