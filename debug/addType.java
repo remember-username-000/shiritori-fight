@@ -19,7 +19,7 @@ public class addType {
                     dataArray.add(raw);
                     break;
                 }
-                raw[1] = raw[1].trim().substring(0, raw[1].indexOf(",") - 1);
+                raw[1] = raw[1].substring(0, raw[1].indexOf(",")).trim();
                 dataArray.add(raw);
             }
             fileRead.close();
@@ -27,6 +27,9 @@ public class addType {
             System.out.println("File read exception!");
             return;
         }
+        //for (int i = 0; i < dataArray.size(); i++) {
+        //    System.out.println(dataArray.get(i)[0] + " --- " + dataArray.get(i)[1]);
+        //}
     
         Scanner userInput = new Scanner (System.in);
         System.out.println("Ready");
@@ -50,9 +53,15 @@ public class addType {
                 s = s.trim();
             }
         }
+        
+        //for (String [] e : newDataArray) {
+        //    System.out.println(e[0] + " --- " + e[1]);
+        //}
+        //System.out.println();
 
         int added = 0;
         int changed = 0;
+        int deleted = 0;
 
         for (String [] s : newDataArray) {
             int lower = 0;
@@ -66,26 +75,38 @@ public class addType {
                 } else if (dataArray.get(pointer)[0].compareTo(s[0]) > 0) {
                     upper = pointer;
                 } else if (dataArray.get(pointer)[0].compareTo(s[0]) == 0) {
-                    break;
+                    lower = pointer;
+                    upper = pointer;
                 }
             }
-            if (lower == upper) {
+            if ((lower == upper) && !(s[1].equals("-1"))) {
                 if (dataArray.get(lower)[0].compareTo(s[0]) < 0) {
                     dataArray.add((lower + 1), s);
                     added++;
-                    continue;
                 } else if (dataArray.get(lower)[0].compareTo(s[0]) > 0) {
                     dataArray.add(lower, s);
                     added++;
-                    continue;
                 } else if (dataArray.get(lower)[0].compareTo(s[0]) == 0) {
                     dataArray.set(lower, s);
                     changed++;
                 }
+                continue;
+            } else if ((lower == upper) && (s[1].equals("-1"))) {
+                if (dataArray.get(lower)[0].compareTo(s[0]) == 0) {
+                    dataArray.remove(lower);
+                    deleted++;
+                }
+                continue;
             }
-            dataArray.add(s);
-            added++;
+            if (lower > upper) {
+                dataArray.add(s);
+                added++;
+                continue;
+            }
         }
+        //for (int i = 0; i < dataArray.size(); i++) {
+        //    System.out.println(dataArray.get(i)[0] + " --- " + dataArray.get(i)[1]);
+        //}
 
         try {
             File typeList = new File ("../lib/data-wordTypes.js");
@@ -97,9 +118,8 @@ public class addType {
             fileWrite.write("\t\"" + dataArray.get(dataArray.size() - 1)[0] + "\": " + dataArray.get(dataArray.size() - 1)[1] + "\n");
             fileWrite.write("}");
             fileWrite.close();
-            System.out.println();
             System.out.print("Success: ");
-            System.out.println(added + " additions and " + changed + " changes.");
+            System.out.println(added + " addition(s), " + changed + " change(s), and " + deleted + " deletion(s).");
         } catch (Exception exception) {
             System.out.println("File write exception!");
             return;
