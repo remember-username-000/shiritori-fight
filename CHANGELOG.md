@@ -7,6 +7,8 @@ This project is NOT an API, and thus does not declare a public API. Therefore, i
 
 ## [Unreleased]
 
+## [1.0.0-alpha.1]
+
 ### Added
 
 - Three new types!
@@ -134,3 +136,4 @@ Any versions before this one were developed before migrating the project to GitH
 [Unreleased]: https://github.com/remember-username-000/shiritori-fight/compare/main...v0.0.0?diff=unified
 [0.0.0]: https://github.com/remember-username-000/shiritori-fight/releases/tag/v0.0.0
 [1.0.0-alpha]: https://github.com/remember-username-000/shiritori-fight/releases/tag/v1.0.0-alpha
+[1.0.0-alpha.1]: https://github.com/remember-username-000/shiritori-fight/releases/tag/v1.0.0-alpha.1
