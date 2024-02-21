@@ -51,6 +51,9 @@ public class addType {
             }
         }
 
+        int added = 0;
+        int changed = 0;
+
         for (String [] s : newDataArray) {
             int lower = 0;
             int upper = dataArray.size() - 1;
@@ -69,13 +72,19 @@ public class addType {
             if (lower == upper) {
                 if (dataArray.get(lower)[0].compareTo(s[0]) < 0) {
                     dataArray.add((lower + 1), s);
+                    added++;
                     continue;
                 } else if (dataArray.get(lower)[0].compareTo(s[0]) > 0) {
                     dataArray.add(lower, s);
+                    added++;
                     continue;
+                } else if (dataArray.get(lower)[0].compareTo(s[0]) == 0) {
+                    dataArray.set(lower, s);
+                    changed++;
                 }
             }
             dataArray.add(s);
+            added++;
         }
 
         try {
@@ -88,7 +97,9 @@ public class addType {
             fileWrite.write("\t\"" + dataArray.get(dataArray.size() - 1)[0] + "\": " + dataArray.get(dataArray.size() - 1)[1] + "\n");
             fileWrite.write("}");
             fileWrite.close();
-            System.out.println("Success");
+            System.out.println();
+            System.out.print("Success: ");
+            System.out.println(added + " additions and " + changed + " changes.");
         } catch (Exception exception) {
             System.out.println("File write exception!");
             return;
