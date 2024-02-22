@@ -22,6 +22,11 @@ body, html {
     border: 2px solid #0000ff;
     overflow: hidden;
     padding-top: 0;
+    background-image: url(sprites/bg2.jpg);
+    background-repeat: repeat-x;
+    background-size: auto 125%;
+    background-position: 50% 50%;
+    background-position: 50% 100%;
 }
 
 .stats-area {
@@ -103,23 +108,19 @@ body, html {
 
 .player-current-word-container .type-preview {
     position: absolute;
-    font-size: 48px;
-    opacity: 0.2;
-    height: 64px;
+    opacity: 0.5;
+    height: 48px;
     width: 48px;
     left: 0;
     right: 0;
     margin: 0 auto 0 auto;
-    z-index: -1;
 }
 
 .player-current-word-container .current-word-display-shading {
     position: absolute;
-    z-index: -2;
     height: 32px;
     width: 128px;
-    background: #000000;
-    opacity: 0.1;
+    background: #dddddd;
     border-radius: 50%;
     bottom: -16px;
     left: 0;
@@ -130,9 +131,11 @@ body, html {
 
 #user-word-interface {
     position: absolute;
-    left: 16px;
-    right: 16px;
-    bottom: 16px;
+    padding: 0 16px 16px 16px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.75)
 }
 
 #word-input {
@@ -155,12 +158,14 @@ body, html {
 
 .type-preview {
     display: inline;
+    image-rendering: pixelated;
 }
 
 #player-ui-type-preview {
-    font-size: 48px;
+    height: 48px;
+    width: 48px;
     position: relative;
-    top: 8px;
+    top: 16px;
 }
 
 #word-select-menu {
@@ -205,7 +210,8 @@ body, html {
 
 #word-history .type-preview {
     vertical-align: top;
-    margin-right: 1em;
+    margin-top: 4px;
+    margin-right: 8px;
 }
 
 #word-history .word-history-entry {
