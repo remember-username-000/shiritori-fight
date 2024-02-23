@@ -22,6 +22,11 @@ body, html {
     border: 2px solid #0000ff;
     overflow: hidden;
     padding-top: 0;
+    background-image: url(sprites/bg0.png);
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    background-position: 50% 100%;
+    image-rendering: pixelated;
 }
 
 .stats-area {
@@ -29,11 +34,15 @@ body, html {
     width: 256px;
     padding: 8px;
     background: #eeeeee;
+    border: 2px solid #555555;
 }
 
 .stats-area.opponent-stats {
     top: 10%;
     padding-left: 32px;
+    border-left: none;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
 }
 
 .stats-area.player-stats {
@@ -41,6 +50,9 @@ body, html {
     right: 0;
     padding-right: 32px;
     text-align: right;
+    border-right: none;
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
 }
 
 .player-name {
@@ -77,6 +89,16 @@ body, html {
     height: 64px;
 }
 
+.player-current-word-container.for-opponent {
+    top: 25%;
+    right: 25%;
+}
+
+.player-current-word-container.for-you {
+    bottom: 20%;
+    left: 25%;
+}
+
 .player-current-word-container .current-word-inner-container {
     position: relative;
     width: fit-content;
@@ -85,54 +107,83 @@ body, html {
 
 .player-current-word-container .current-word-display {
     margin: 0 0 0 -50%;
-    font-size: 32px;
-    line-height: 64px;
     text-align: center;
     white-space: nowrap;
 }
 
-.player-current-word-container.for-opponent {
-    top: calc(10% + 96px);
-    left: 30%;
+#opponent-current-word {
+    font-size: 32px;
+    line-height: 64px;
+
 }
 
-.player-current-word-container.for-you {
-    bottom: calc(20% + 96px);
-    right: 30%;
+#you-current-word {
+    font-size: 56px;
+    line-height: 64px;
 }
 
 .player-current-word-container .type-preview {
     position: absolute;
-    font-size: 48px;
-    opacity: 0.2;
-    height: 64px;
-    width: 48px;
+    opacity: 0.5;
     left: 0;
     right: 0;
     margin: 0 auto 0 auto;
-    z-index: -1;
+}
+
+.player-current-word-container.for-you .type-preview {
+    height: 72px;
+    width: 72px;
+}
+
+.player-current-word-container.for-opponent .type-preview {
+    height: 48px;
+    width: 48px;
 }
 
 .player-current-word-container .current-word-display-shading {
-    position: absolute;
-    z-index: -2;
-    height: 32px;
-    width: 128px;
-    background: #000000;
-    opacity: 0.1;
+    background: #dddddd;
     border-radius: 50%;
     bottom: -16px;
-    left: 0;
+    left: 50%;
     right: 0;
-    margin: 0 auto 0 auto;
     display: none;
+}
+
+.shading-positioner.for-opponent {
+    position: absolute;
+    width: fit-content;
+    left: 50%;
+}
+
+.current-word-display-shading.for-opponent {
+    margin: 0 0 0 -100%;
+    top: 32px;
+    position: relative;
+    height: 48px;
+    width: 192px;
+}
+
+.shading-positioner.for-you {
+    position: absolute;
+    width: fit-content;
+    left: 50%;
+}
+
+.current-word-display-shading.for-you {
+    margin: 0 0 0 -100%;
+    top: 16px;
+    position: relative;
+    height: 128px;
+    width: 512px;
 }
 
 #user-word-interface {
     position: absolute;
-    left: 16px;
-    right: 16px;
-    bottom: 16px;
+    padding: 0 16px 16px 16px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.75)
 }
 
 #word-input {
@@ -155,12 +206,14 @@ body, html {
 
 .type-preview {
     display: inline;
+    image-rendering: pixelated;
 }
 
 #player-ui-type-preview {
-    font-size: 48px;
+    height: 48px;
+    width: 48px;
     position: relative;
-    top: 8px;
+    top: 16px;
 }
 
 #word-select-menu {
@@ -205,7 +258,8 @@ body, html {
 
 #word-history .type-preview {
     vertical-align: top;
-    margin-right: 1em;
+    margin-top: 4px;
+    margin-right: 8px;
 }
 
 #word-history .word-history-entry {

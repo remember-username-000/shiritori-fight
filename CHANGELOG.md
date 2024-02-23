@@ -7,6 +7,15 @@ This project is NOT an API, and thus does not declare a public API. Therefore, i
 
 ## [Unreleased]
 
+### Added
+
+- Word types now show as fresh new images instead of letters
+- Added a grassy field background for the main game
+
+### Changed
+
+- Main game elements should be easier to read now
+
 ## [1.0.0-alpha.1]
 
 ### Added
