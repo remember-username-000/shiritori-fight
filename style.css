@@ -24,7 +24,7 @@ body, html {
     padding-top: 0;
     background-image: url(sprites/bg0.png);
     background-repeat: repeat-x;
-    background-size: auto 115%;
+    background-size: auto 100%;
     background-position: 50% 100%;
     image-rendering: pixelated;
 }
