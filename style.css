@@ -24,7 +24,7 @@ body, html {
     padding-top: 0;
     background-image: url(sprites/bg2.jpg);
     background-repeat: repeat-x;
-    background-size: auto 125%;
+    background-size: auto 200%;
     background-position: 50% 50%;
     background-position: 50% 100%;
 }
@@ -82,6 +82,16 @@ body, html {
     height: 64px;
 }
 
+.player-current-word-container.for-opponent {
+    top: 25%;
+    right: 25%;
+}
+
+.player-current-word-container.for-you {
+    bottom: 20%;
+    left: 25%;
+}
+
 .player-current-word-container .current-word-inner-container {
     position: relative;
     width: fit-content;
@@ -90,43 +100,74 @@ body, html {
 
 .player-current-word-container .current-word-display {
     margin: 0 0 0 -50%;
-    font-size: 32px;
-    line-height: 64px;
     text-align: center;
     white-space: nowrap;
 }
 
-.player-current-word-container.for-opponent {
-    top: calc(10% + 96px);
-    left: 30%;
+#opponent-current-word {
+    font-size: 32px;
+    line-height: 64px;
+
 }
 
-.player-current-word-container.for-you {
-    bottom: calc(20% + 96px);
-    right: 30%;
+#you-current-word {
+    font-size: 56px;
+    line-height: 64px;
 }
 
 .player-current-word-container .type-preview {
     position: absolute;
     opacity: 0.5;
-    height: 48px;
-    width: 48px;
     left: 0;
     right: 0;
     margin: 0 auto 0 auto;
 }
 
+.player-current-word-container.for-you .type-preview {
+    height: 72px;
+    width: 72px;
+}
+
+.player-current-word-container.for-opponent .type-preview {
+    height: 48px;
+    width: 48px;
+}
+
 .player-current-word-container .current-word-display-shading {
-    position: absolute;
-    height: 32px;
-    width: 128px;
     background: #dddddd;
     border-radius: 50%;
     bottom: -16px;
-    left: 0;
+    left: 50%;
     right: 0;
-    margin: 0 auto 0 auto;
     display: none;
+}
+
+.shading-positioner.for-opponent {
+    position: absolute;
+    width: fit-content;
+    left: 50%;
+}
+
+.current-word-display-shading.for-opponent {
+    margin: 0 0 0 -100%;
+    top: 32px;
+    position: relative;
+    height: 48px;
+    width: 192px;
+}
+
+.shading-positioner.for-you {
+    position: absolute;
+    width: fit-content;
+    left: 50%;
+}
+
+.current-word-display-shading.for-you {
+    margin: 0 0 0 -100%;
+    top: 16px;
+    position: relative;
+    height: 128px;
+    width: 512px;
 }
 
 #user-word-interface {

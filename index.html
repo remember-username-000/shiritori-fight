@@ -26,7 +26,35 @@
         <main>
             <div id="container">
 
-                <div id="main-game">
+                <div id="main-game"><div class="player-current-word-container for-opponent">
+                        <div class="shading-positioner for-opponent">
+                            <div class="current-word-display-shading for-opponent" display="none"></div>
+                        </div>
+                        <img class="type-preview" src="sprites/transparent.png">
+                        <div class="current-word-inner-container">
+                            <span class="current-word-display" id="opponent-current-word"></span>
+                        </div>
+                    </div>
+                    <div class="player-current-word-container for-you">
+                        <div class="shading-positioner for-you">
+                            <div class="current-word-display-shading for-you" display="none"></div>
+                        </div>
+                        <img class="type-preview" src="sprites/transparent.png">
+                        <div class="current-word-inner-container">
+                            <span class="current-word-display" id="you-current-word"></span>
+                        </div>
+                    </div>
+
+                    <div id="user-word-interface">
+                        <!-- <label for="word-input">Input word:</label> <br> -->
+                        <input type="text" id="word-input" name="word-input" placeholder="" disabled>
+                        <div id="user-get">
+                            <img class="type-preview" id="player-ui-type-preview" src="sprites/transparent.png">
+                            <input type="button" id="get" name="get" value="Get" disabled>
+                            <div id="word-select-menu"></div>
+                        </div>
+                    </div>
+                
                     <div class="stats-area opponent-stats">
                         <p class="player-name for-opponent">Opponent</p>
                         <div class="hp-bar-container">
@@ -47,31 +75,7 @@
                             /100
                         </div>
                     </div>
-
-                    <div class="player-current-word-container for-opponent">
-                        <img class="type-preview" src="sprites/transparent.png">
-                        <div class="current-word-inner-container">
-                            <span class="current-word-display" id="opponent-current-word"></span>
-                        </div>
-                        <div class="current-word-display-shading" display="none"></div>
-                    </div>
-                    <div class="player-current-word-container for-you">
-                        <img class="type-preview" src="sprites/transparent.png">
-                        <div class="current-word-inner-container">
-                            <span class="current-word-display" id="you-current-word"></span>
-                        </div>
-                        <div class="current-word-display-shading"></div>
-                    </div>
-
-                    <div id="user-word-interface">
-                        <!-- <label for="word-input">Input word:</label> <br> -->
-                        <input type="text" id="word-input" name="word-input" placeholder="" disabled>
-                        <div id="user-get">
-                            <img class="type-preview" id="player-ui-type-preview" src="sprites/transparent.png">
-                            <input type="button" id="get" name="get" value="Get" disabled>
-                            <div id="word-select-menu"></div>
-                        </div>
-                    </div>
+                    
                 </div>
 
                 <div class="panel" id="right-panel">
