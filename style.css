@@ -22,11 +22,11 @@ body, html {
     border: 2px solid #0000ff;
     overflow: hidden;
     padding-top: 0;
-    background-image: url(sprites/bg2.jpg);
+    background-image: url(sprites/bg0.png);
     background-repeat: repeat-x;
-    background-size: auto 200%;
-    background-position: 50% 50%;
+    background-size: auto 115%;
     background-position: 50% 100%;
+    image-rendering: pixelated;
 }
 
 .stats-area {
@@ -34,11 +34,15 @@ body, html {
     width: 256px;
     padding: 8px;
     background: #eeeeee;
+    border: 2px solid #555555;
 }
 
 .stats-area.opponent-stats {
     top: 10%;
     padding-left: 32px;
+    border-left: none;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
 }
 
 .stats-area.player-stats {
@@ -46,6 +50,9 @@ body, html {
     right: 0;
     padding-right: 32px;
     text-align: right;
+    border-right: none;
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
 }
 
 .player-name {
