@@ -7,15 +7,20 @@ let playerValidWords;
 function onLoad () {
     console.log("Page loaded successfully");
     console.log("main.js loaded successfully"); 
+
+    if (data_wordTypeList) {
+        console.log('External word types list loaded successfully');
+    }
     
     checkAccess(c_data_jmdict);
+
     checkAccess(c_handleInput);
     checkAccess(c_jmDictSearch);
     checkAccess(c_checkWordIsValid);
     checkAccess(c_findNextWord);
     checkAccess(c_updatePage);
     checkAccess(c_classes);
-    //manageGame has no const for this, probably should add one!
+    checkAccess(c_manageGame);
 
     document.getElementById('word-input').addEventListener('input', onUserInput);
     document.getElementById('get').addEventListener('mouseenter', userGetHover);
