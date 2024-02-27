@@ -2,6 +2,17 @@
 
 This program is my version of the game that can be played at http://siritori-battle.net.
 
+## How to run
+
+1. Download the latest release and uncompress it.
+2. Run index.html.
+
+---
+
+## For developers:
+
+The following is for developers who have downloaded a copy of the repo (not a release!)
+
 ## How to manually assign types to words
 
 This feature has not been implemented in the main interface and is really still a debug feature, so the process is not very streamlined. That being said:
