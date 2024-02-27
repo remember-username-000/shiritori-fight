@@ -5,13 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 This project is NOT an API, and thus does not declare a public API. Therefore, it does NOT adhere to [Semantic Versioning](https://semver.org/spec/v2.0.0.html), although the versioning guidelines given there are followed.
 
-## [1.0.0-rc]
+## [1.0.0]
 
 ### Added
 
 - Added documentation for all functions
 
-## [1.0.0-beta]
+## [1.0.0-beta] - 2024-02-25
 
 ### Added
 
@@ -22,7 +22,7 @@ This project is NOT an API, and thus does not declare a public API. Therefore, i
 
 - Main game elements should be easier to read now
 
-## [1.0.0-alpha.1]
+## [1.0.0-alpha.1] - 2024-02-21
 
 ### Added
 
@@ -153,4 +153,4 @@ Any versions before this one were developed before migrating the project to GitH
 [1.0.0-alpha]: https://github.com/remember-username-000/shiritori-fight/releases/tag/v1.0.0-alpha
 [1.0.0-alpha.1]: https://github.com/remember-username-000/shiritori-fight/releases/tag/v1.0.0-alpha.1
 [1.0.0-beta]: https://github.com/remember-username-000/shiritori-fight/releases/tag/v1.0.0-beta
-[1.0.0-rc]: https://github.com/remember-username-000/shiritori-fight/releases/tag/v1.0.0-rc
+[1.0.0]: https://github.com/remember-username-000/shiritori-fight/releases/tag/v1.0.0
