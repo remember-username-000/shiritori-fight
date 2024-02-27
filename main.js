@@ -4,6 +4,9 @@ let opponentObj;
 let wordsPlayed = [];
 let playerValidWords;
 
+/**
+ * This function runs when the page is loaded.
+ */
 function onLoad () {
     console.log("Page loaded successfully");
     console.log("main.js loaded successfully"); 
@@ -58,7 +61,7 @@ function addEvent(element, evnt, funct){
 /**
  * Outputs to the console whether or not a file can be accessed by this file.
  * This function (as well as all of its calls) should be deleted during cleanup and bundling at the end of the project.
- * @param {Object} fileCheck - The object at the beginning of the file to be checked.
+ * @param {Object} fileCheck The object at the beginning of the file to be checked.
  */
 function checkAccess (fileCheck) {
     if (fileCheck) {
@@ -68,6 +71,7 @@ function checkAccess (fileCheck) {
     }
 }
 
+// 2D array of type strengths and weaknesses
 const typeMat = [
     //     0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
     /*0 */[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
