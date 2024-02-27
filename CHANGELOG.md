@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 This project is NOT an API, and thus does not declare a public API. Therefore, it does NOT adhere to [Semantic Versioning](https://semver.org/spec/v2.0.0.html), although the versioning guidelines given there are followed.
 
-## [1.0.0]
+## [1.0.0] - 2024-02-27
 
 ### Added
 
