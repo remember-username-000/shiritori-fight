@@ -27,7 +27,7 @@ function onLoad () {
 
     document.getElementById('word-input').addEventListener('input', onUserInput);
     document.getElementById('get').addEventListener('mouseenter', userGetHover);
-    document.getElementById('get').addEventListener('click', () => { playerSubmit(playerValidWords[playerValidWords.length - 1], true); });
+    document.getElementById('get').addEventListener('click', () => { playerSubmit(playerValidWords[playerValidWords.length - 1]); });
     document.getElementById('word-select-menu').addEventListener('mouseleave', () => { document.getElementById('word-select-menu').style.display = 'none'; });
     document.querySelector('.panel-menu-tab-text.class-word-history').addEventListener('click', () => { panelChange('right-panel', 'class-word-history'); });
     document.querySelector('.panel-menu-tab-text.class-game-log').addEventListener('click', () => { panelChange('bottom-panel', 'class-game-log'); });
@@ -61,13 +61,13 @@ function addEvent(element, evnt, funct){
 /**
  * Outputs to the console whether or not a file can be accessed by this file.
  * This function (as well as all of its calls) should be deleted during cleanup and bundling at the end of the project.
- * @param {Object} fileCheck The object at the beginning of the file to be checked.
+ * @param {string} fileCheck The object at the beginning of the file to be checked.
  */
 function checkAccess (fileCheck) {
     if (fileCheck) {
-        console.log(`Access to ${fileCheck} available`)
+        console.log(`Access to ${fileCheck} available`);
     } else {
-        console.log(`No access to ${fileCheck}`)
+        console.log(`No access to ${fileCheck}`);
     }
 }
 
