@@ -1,0 +1,304 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    border: 2px solid #777777;
+}
+
+#main-game {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 75%;
+    border: 2px solid #0000ff;
+    overflow: hidden;
+    padding-top: 0;
+    background-image: url(sprites/bg0.png);
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    background-position: 50% 100%;
+    image-rendering: pixelated;
+}
+
+.stats-area {
+    position: absolute;
+    width: 256px;
+    padding: 8px;
+    background: #eeeeee;
+    border: 2px solid #555555;
+}
+
+.stats-area.opponent-stats {
+    top: 10%;
+    padding-left: 32px;
+    border-left: none;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+}
+
+.stats-area.player-stats {
+    bottom: 20%;
+    right: 0;
+    padding-right: 32px;
+    text-align: right;
+    border-right: none;
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
+}
+
+.player-name {
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+.hp-text-container {
+    margin-top: 4px;
+}
+
+.hp-bar-container {
+    height: 4px;
+    width: 200px;
+    background: #ff0000;
+    padding: 0;
+}
+
+.hp-bar {
+    height: 4px;
+    width: 0;
+    background: #00ff00;
+    margin: 0;
+}
+
+.hp-bar-container.for-you {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.player-current-word-container {
+    position: absolute;
+    width: 128px;
+    height: 64px;
+}
+
+.player-current-word-container.for-opponent {
+    top: 25%;
+    right: 25%;
+}
+
+.player-current-word-container.for-you {
+    bottom: 20%;
+    left: 25%;
+}
+
+.player-current-word-container .current-word-inner-container {
+    position: relative;
+    width: fit-content;
+    left: 50%;
+}
+
+.player-current-word-container .current-word-display {
+    margin: 0 0 0 -50%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#opponent-current-word {
+    font-size: 32px;
+    line-height: 64px;
+
+}
+
+#you-current-word {
+    font-size: 56px;
+    line-height: 64px;
+}
+
+.player-current-word-container .type-preview {
+    position: absolute;
+    opacity: 0.5;
+    left: 0;
+    right: 0;
+    margin: 0 auto 0 auto;
+}
+
+.player-current-word-container.for-you .type-preview {
+    height: 72px;
+    width: 72px;
+}
+
+.player-current-word-container.for-opponent .type-preview {
+    height: 48px;
+    width: 48px;
+}
+
+.player-current-word-container .current-word-display-shading {
+    background: #dddddd;
+    border-radius: 50%;
+    bottom: -16px;
+    left: 50%;
+    right: 0;
+    display: none;
+}
+
+.shading-positioner.for-opponent {
+    position: absolute;
+    width: fit-content;
+    left: 50%;
+}
+
+.current-word-display-shading.for-opponent {
+    margin: 0 0 0 -100%;
+    top: 32px;
+    position: relative;
+    height: 48px;
+    width: 192px;
+}
+
+.shading-positioner.for-you {
+    position: absolute;
+    width: fit-content;
+    left: 50%;
+}
+
+.current-word-display-shading.for-you {
+    margin: 0 0 0 -100%;
+    top: 16px;
+    position: relative;
+    height: 128px;
+    width: 512px;
+}
+
+#user-word-interface {
+    position: absolute;
+    padding: 0 16px 16px 16px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.75)
+}
+
+#word-input {
+    width: calc(100% - 104px);
+    height: 48px;
+    padding-left: 12px;
+    font-size: 24px;
+}
+
+#user-get {
+    display: inline-block;
+}
+
+#get {
+    height: 48px;
+    width: 48px;
+    position: relative;
+    bottom: 3px;
+}
+
+.type-preview {
+    display: inline;
+    image-rendering: pixelated;
+}
+
+#player-ui-type-preview {
+    height: 48px;
+    width: 48px;
+    position: relative;
+    top: 16px;
+}
+
+#word-select-menu {
+    position: absolute;
+    min-width: 128px;
+    height: fit-content;
+    border: 2px solid #00ff00;
+    display: none;
+    bottom: 0;
+    right: 0;
+    background-color: #ffffff;
+}
+
+.word-select-menu-item {
+    background: #ffffff;
+}
+
+.word-select-menu-item:hover {
+    background: #eeeeee;
+    cursor: pointer;
+}
+
+.panel {
+    position: absolute;
+    overflow: auto;
+}
+
+#right-panel {
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100%;
+    border: 2px solid #ff0000;
+}
+
+#word-history {
+    padding-left: 1em;
+    padding-top: 1em;
+    overflow: auto;
+    display: none;
+}
+
+#word-history .type-preview {
+    vertical-align: top;
+    margin-top: 4px;
+    margin-right: 8px;
+}
+
+#word-history .word-history-entry {
+    display: inline-block;
+    margin: 0;
+    width: calc(100% - 2em);
+}
+
+#bottom-panel {
+    bottom: 0;
+    left: 0;
+    width: 75%;
+    height: 25%;
+    border: 2px solid #00ff00;
+}
+
+#bottom-panel .panel-contents {
+    position: absolute;
+    padding-left: 2em;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: calc(100% - 3em);
+    overflow: auto;
+    display: none;
+}
+
+.panel-menu-tab-text {
+    display: inline-block;
+    padding: 0.5em;
+    margin: 0;
+    color: #777777;
+}
+
+.panel-menu-tab-text:hover {
+    cursor: pointer;
+}
+
+.panel-menu-bar {
+    padding-left: 1em;
+    background: #eeeeee;
+}
